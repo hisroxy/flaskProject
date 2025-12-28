@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+{% block content%}
+<style>
+    .jumbotron{
+        background-color: #e0e4e8;
+    }
+</style>
+<div class="jumbotron">
+    <h1 class="display-4">
+    {% if current_user.username%}
+    Hello,{{current_user.username}}!
+    {%else%}
+    Hello,World!
+    {%endif%}
+    </h1>
+    <p class="lead">欢迎</p>
+    <hr class="my-4">
+    <p>和我们一起开启编程学习之旅吧！</p>
+    <a class="btn btn-success btn-lg" href="/" role="button">开始学习</a>
+
+</div>
+{%endblock%}
